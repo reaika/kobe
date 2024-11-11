@@ -2,3 +2,65 @@
 
 git_test... 
 演習43　テキスト追加、AddCommitPush
+
+========== 参考url（＋おまけ） =============
+https://qiita.com/mikaku/items/0c1d829faf0c6eecf658
+Gitでcloneしてブランチ切ってみた
+
+https://qiita.com/hiroaki-u/items/4e97f338ad18fca142b8
+【初心者向け】git pull, git fetch, git pushで何が起きているか図解してみた
+
+https://docs.github.com/ja/get-started/using-git/getting-changes-from-a-remote-repository
+リモートリポジトリから変更を取得する
+
+https://backlog.com/ja/git-tutorial/reference/remote/
+サル先生のGit入門　リモート操作
+https://backlog.com/ja/git-tutorial/reference/branch/
+サル先生のGit入門　ブランチ操作
+
+
+https://qiita.com/yukure/items/89562e5eb1d03995dc5b
+git addを取り消す
+=====================================
+
+============= 手順(記憶用メモ) =============
+01.招待状受け取り
+
+02.clone作業（既存のremoteRepositoryを複製）
+　＊作業を行う ディレクトリ場所に 注意＊
+　既存の localRepository 内には 作れない。
+
+
+
+≪使用コマンド≫
+　　git clone [cloneのurl。プロジェクトのurl]
+
+〈入力内容〉
+　git clone https://github.com/○○/●●●●
+
+〈出力結果〉
+　Cloning into '●●●●'...
+　remote: Enumerating objects: 3, done.
+　remote: Counting objects: 100% (3/3), done.
+　remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+　Receiving objects: 100% (3/3), done.
+
+≪補足説明≫
+　○○： ユーザ名。
+　●●●●：プロジェクト名。？
+
+
+03.参照先を追加
+
+≪使用コマンド≫
+　　git remote add [自分のユーザ名] [cloneのurl。プロジェクトのurl]
+
+〈入力内容〉
+　git remote add remoteHH https://github.com/○○/●●●●
+
+〈出力結果〉
+
+
+
+
+......編集、追々。 (11/11  11時30分)
