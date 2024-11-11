@@ -1,0 +1,4 @@
+2024/11/11
+
+git_test... 
+演習43　テキスト追加、AddCommitPush
