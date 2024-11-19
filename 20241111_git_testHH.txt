@@ -21,6 +21,10 @@ https://backlog.com/ja/git-tutorial/reference/branch/
 
 https://qiita.com/yukure/items/89562e5eb1d03995dc5b
 git addを取り消す
+
+11/13　データベースがつながらねぇ問題
+UbuntuでPostgreSQLを使ってみよう (2)
+https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 =====================================
 
 ============= 手順(記憶用メモ) =============
@@ -50,6 +54,7 @@ git addを取り消す
 　●●●●：プロジェクト名。？
 
 
+
 03.参照先を追加
 
 ≪使用コマンド≫
@@ -59,8 +64,179 @@ git addを取り消す
 　git remote add remoteHH https://github.com/○○/●●●●
 
 〈出力結果〉
+　何も表示はない。
+　だが、これで新たにremoetRepositoryが作成された？
+
+04.作ったremoteRepository含め、確認
+≪使用コマンド≫
+　　git remote -v
+
+〈入力内容〉
+　　git remote -v
+
+〈出力結果〉
+　　origin   https://github.com/〇〇/●●●● (fetch)　　　　← mainのこと？
+　　origin   https://github.com/〇〇/●●●● (push)
+　　branchHH　　https://github.com/〇〇/●●●● (fetch)　　← 自分が作ったbranchのこと
+　　branchHH　　https://github.com/〇〇/●●●● (push)
+
+
+05a. branch確認してみよう
+≪使用コマンド≫
+　　git branch
+
+〈入力内容〉
+　　git branch
+
+〈出力結果〉
+　* origin
+
+
+
+05b.branchを作成しとこ。
+≪使用コマンド≫
+　　git branch [作ろうとしているbranch名前]
+
+〈入力内容〉
+　　git remote branchHH
+
+〈出力結果〉
+　　何も表示はない
+
+
+
+05c. branchもう一度確認しよう
+≪使用コマンド≫
+　　git branch
+
+〈入力内容〉
+　　git branch
+
+〈出力結果〉
+　　branchHH
+　* origin　　　　　← つまりこの「*」は 今いるところの意味。
+
+
+
+06a.行きたいbranchに移動
+≪使用コマンド≫
+　　git checkout [行きたいbranch名]
+〈入力内容〉
+　　git checkout branchHH
+
+〈出力結果〉
+
+
+
+06b. branchもう一度確認しよう
+≪使用コマンド≫
+　　git branch
+
+〈入力内容〉
+　　git branch
+
+〈出力結果〉
+　* branchHH
+　　origin
 
 
 
 
-......編集、追々。 (11/11  11時30分)
+
+07a. 作成したもの または 更新したものを ステージングエリアに追加（remoteリポジトリに揚げる前準備）
+≪使用コマンド≫
+　　git add [送りたい作成物]
+
+もしキャンセルしたい場合、
+　　git remove [送りたかった作成物]
+
+07b.
+≪使用コマンド≫
+　　git commit -m "[ここにわかりやすいコメント]"
+
+07c.送付
+くれぐれも、mainじゃなくて つくったremoteリポジトリと branchへ？
+≪使用コマンド≫
+　　git push [送付先repository名] [送付先branch名]
+
+
+
+
+
+......編集、追々。 (11/19  17時30分)
+
+=====================================
+
+
+============= おまけ(メモ) =============
+使えるコマンドとか。スクショ記録より。
+訂正・編集は　追々、追々...
+
+
+≪使用コマンド≫
+　　ls
+
+≪使用コマンド≫
+　　pwd
+≪使用コマンド≫
+　　whoami
+
+≪使用コマンド≫
+　　ls -lah
+≪使用コマンド≫
+　cd [移動先]
+≪使用コマンド≫
+　cd ..
+
+
+・gitの branch 一覧 確認
+≪使用コマンド≫
+　git branch 
+≪--注意!!--≫
+　　コマンドの 後ろに 名前とかを入れない。それは「branch作成」になってしまう。
+　　　 git branch [なんかの名前]
+
+
+・gitの branch 一覧 確認 +
+≪使用コマンド≫
+　git branch -r
+
+≪使用コマンド≫
+　git branch -a
+
+
+
+
+≪使用コマンド≫
+　　git pull [repository名前] [branch名前]
+
+
+・gitの remoteRepository 一覧 確認
+≪使用コマンド≫
+　git remote -v
+〈出力結果〉
+　　origin   https://github.com/〇〇/●●●● (fetch)　　　　← mainのこと？
+　　origin   https://github.com/〇〇/●●●● (push)
+　　branchHH　　https://github.com/〇〇/●●●● (fetch)　　← 自分が作ったbranchのこと
+　　branchHH　　https://github.com/〇〇/●●●● (push)
+
+
+・レポジトリ削除
+≪使用コマンド≫
+　git remote rm [削除したいもの]
+〈出力結果〉
+
+・branch削除
+≪使用コマンド≫
+　git branch -d [削除したいbranch]
+
+
+・名前の変更
+≪使用コマンド≫
+　　git remote rename [元の名前] [新しい名前]
+
+・reposirtoryの　url変更
+≪使用コマンド≫
+　　git remote set-url [remoteReportory名] [訂正したurl先]
+
+
