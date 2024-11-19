@@ -127,6 +127,7 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 〈出力結果〉
 
 
+
 06b. branchもう一度確認しよう
 ≪使用コマンド≫
 　　git branch
@@ -153,7 +154,7 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 ≪使用コマンド≫
 　　git commit -m "[ここにわかりやすいコメント]"
 
-07c.
+07c.送付
 くれぐれも、mainじゃなくて つくったremoteリポジトリと branchへ？
 ≪使用コマンド≫
 　　git push [送付先repository名] [送付先branch名]
