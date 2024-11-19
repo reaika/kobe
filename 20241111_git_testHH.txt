@@ -220,7 +220,6 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 　　branchHH　　https://github.com/〇〇/●●●● (fetch)　　← 自分が作ったbranchのこと
 　　branchHH　　https://github.com/〇〇/●●●● (push)
 
-
 ・レポジトリ削除
 ≪使用コマンド≫
 　git remote rm [削除したいもの]
@@ -229,7 +228,6 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 ・branch削除
 ≪使用コマンド≫
 　git branch -d [削除したいbranch]
-
 
 ・名前の変更
 ≪使用コマンド≫
