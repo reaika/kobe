@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤怠管理</title>
+    <link rel="stylesheet" href="AttendanceInput.css">
+</head>
+
+<body>
+<div>
+    <p id="time">現在時刻: </p>
+
+    <div class="link">
+        <a th:href="@{/AttendanceInput}">勤怠入力</a>
+        <a th:href="@{/place}">勤怠場所登録</a>
+        <a th:href="@{/address}">連絡先登録</a>
+        <a th:href="@{/condition}">勤務状況一覧表示</a>
+        <a th:href="@{/history}">勤怠履歴一覧表示</a>
+        <a th:href="@{/logout}">ログアウト</a>
+    </div>
+
+
+
+    <p class="form-name">こんにちは、〇〇さん</p>
+    <p class="form-condition">状態:未出勤</p>
+
+    <form th:action="@{/checkin}" method="post">
+        <input type="submit" value="出勤" id="出勤" >
+    </form>
+    <form th:action="@{/checkout}" method="post">
+        <input type="submit" value="退勤" id="退勤"></br>
+    </form>
+        <input type="submit" value="休憩開始" id="休憩開始">
+        <input type="submit" value="休憩終了" id="休憩終了">
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
