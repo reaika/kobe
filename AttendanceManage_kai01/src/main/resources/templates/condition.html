@@ -32,9 +32,9 @@
         </tr>
 
         <tr th:each="attendance : ${attendances}">
-            <td><a th:href="@{#}"  th:text= "${attendance.empid}"></a></td>
-            <td th:text="${attendance.att_workstart}"></td>
-            <td th:text="${attendance.att_workend}"></td>
+            <td><a th:href="@{#}"  th:text= "${attendance.id}"></a></td>
+            <td th:text="${attendance.begin_time}"></td>
+            <td th:text="${attendance.end_time}"></td>
             <td>出勤中</td>
             <td>自宅</td>
         </tr>

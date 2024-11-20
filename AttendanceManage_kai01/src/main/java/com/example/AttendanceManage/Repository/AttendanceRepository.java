@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AttendanceRepository extends JpaRepository<Attendance, Integer> {
-    @Query("SELECT MAX(a.empid) FROM Attendance a")
-    Integer findMaxEmpid();
+    @Query("SELECT MAX(a.id) FROM Attendance a")
+    Integer findMaxId();
 
-    Attendance findTopByOrderByEmpidDesc();
+    Attendance findTopByOrderByIdDesc();
 }
 

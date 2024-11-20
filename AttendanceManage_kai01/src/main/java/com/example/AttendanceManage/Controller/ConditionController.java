@@ -37,13 +37,13 @@ public class ConditionController {
     public String checkIn() {
         attendanceService.checkIn();
 
-        return "redirect:/AttendanceInput";
+        return "redirect:/condition";
     }
 
     @PostMapping("/checkout")
     public String checkOut() {
         attendanceService.checkOut();
-        return "redirect:/AttendanceInput";
+        return "redirect:/condition";
     }
 
 }

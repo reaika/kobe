@@ -11,32 +11,32 @@ import java.sql.Time;
 public class Attendance {
 
     @Id
-    private int empid;
+    private int id;
 
-    private Time att_workstart;
+    private Time begin_time;
 
-    private Time att_workend;
+    private Time end_time;
 
     // getter setter
-    public int getEmpid() {
-        return empid;
+    public int getId() {
+        return id;
     }
-    public void setEmpid(int empid) {
-        this.empid = empid;
-    }
-
-    public Time getAtt_workstart() {
-        return att_workstart;
-    }
-    public void setAtt_workstart(Time att_workstart) {
-        this.att_workstart = att_workstart;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Time getAtt_workend() {
-        return att_workend;
+    public Time getBegin_time() {
+        return begin_time;
     }
-    public void setAtt_workend(Time att_workend) {
-        this.att_workend = att_workend;
+    public void setBegin_time(Time begin_time) {
+        this.begin_time = begin_time;
+    }
+
+    public Time getEnd_time() {
+        return end_time;
+    }
+    public void setEnd_time(Time end_time) {
+        this.end_time = end_time;
     }
 
 }
