@@ -61,6 +61,7 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 ≪使用コマンド≫
 　　git remote add [自分のユーザ名] [cloneのurl。プロジェクトのurl]
 
+EbisMaruCatの場合はこうだった：
 〈入力内容〉
 　git remote add remoteHH https://github.com/○○/●●●●
 
@@ -99,7 +100,7 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 　　git branch [作ろうとしているbranch名前]
 
 〈入力内容〉
-　　git remote branchHH
+　　git branch branchHH
 
 〈出力結果〉
 　　何も表示はない
@@ -142,14 +143,19 @@ https://lets.postgresql.jp/documents/tutorial/ubuntu/2
 
 
 
-
+[!?]
 
 07a. 作成したもの または 更新したものを ステージングエリアに追加（remoteリポジトリに揚げる前準備）
 ≪使用コマンド≫
 　　git add [送りたい作成物]
 
-もしキャンセルしたい場合、
-　　git remove [送りたかった作成物]
+もしaddすぐ キャンセルしたい場合、" git reset "    NOT remove
+　　git reset  [送りたかった作成物]
+
+
+https://qiita.com/y-suzu/items/0698de028937a972d275
+
+
 
 07b.
 ≪使用コマンド≫
