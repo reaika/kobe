@@ -23,14 +23,7 @@
     <p>2023/10/02 16:10</p>
     <table border="1">
         <tr> <th>氏名</th> <th>勤務開始時間</th> <th>勤務終了時間</th> <th>ステータス</th> <th>勤務場所</th> </tr>
-        <tr> 
-            <td><a href="#" class="clickable" data-phone="090-1234-5678" data-mail="example1@mail.com">名無し1</a></td> 
-            <td>09:00</td> 
-            <td>---</td> 
-            <td>出勤中</td> 
-            <td>自宅</td> 
-        </tr>
-
+        <!--ConditionControllerから受け取ったモデルを展開 -->
         <tr th:each="attendance : ${attendances}">
             <td><a th:href="@{#}"  th:text= "${attendance.id}"></a></td>
             <td th:text="${attendance.begin_time}"></td>

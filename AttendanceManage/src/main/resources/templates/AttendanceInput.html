@@ -21,18 +21,17 @@
         <a th:href="@{/history}">勤怠履歴一覧表示</a>
         <a th:href="@{/logout}">ログアウト</a>
     </div>
-
-
-
     <p class="form-name">こんにちは、〇〇さん</p>
     <p class="form-condition">状態:未出勤</p>
 
-    <input type="submit" value="出勤" id="出勤">
-    <input type="submit" value="退勤" id="退勤"></br>
+    <form th:action="@{/AttendanceInput}" method="post">
+        <button type="submit" name="action" value="start" th:disabled="${isWorking}">出勤</button>
+        <button type="submit" name="action" value="end" th:disabled="${!isWorking}">退勤</button>
+        <br>
 
-    <input type="submit" value="休憩開始" id="休憩開始">
-    <input type="submit" value="休憩終了" id="休憩終了">
-
+        <button type="submit" name="action" value="start_break" th:disabled="${!isWorking}">休憩開始</button>
+        <button type="submit" name="action" value="end_break" th:disabled="${!isWorking}">休憩終了</button>
+    </form>
 </div>
 
 <script src="login.js"></script>

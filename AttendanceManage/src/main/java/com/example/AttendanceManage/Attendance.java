@@ -8,6 +8,10 @@ import jakarta.persistence.Table;
 import java.sql.Time;
 import java.time.LocalTime;
 
+/**
+ * 勤怠情報のデータクラス
+ * データの取得や登録・更新で使用します。
+ */
 @Entity
 @Table(name="attendance")
 public class Attendance {

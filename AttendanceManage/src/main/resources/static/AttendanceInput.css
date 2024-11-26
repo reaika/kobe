@@ -54,3 +54,27 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+button{
+    width: 100px;
+    padding: 8px; /* ボタンのパディングを少し小さく */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+button:disabled{
+    width: 100px;
+    padding: 8px; /* ボタンのパディングを少し小さく */
+    background-color:gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+}
