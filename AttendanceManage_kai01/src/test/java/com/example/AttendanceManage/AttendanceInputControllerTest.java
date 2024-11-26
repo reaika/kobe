@@ -23,6 +23,7 @@ public class AttendanceInputControllerTest {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    /* テキストとおり */
     @Test
     public void testIndex() throws Exception{
         mockMvc.perform(get("/AttendanceInput"))

@@ -17,6 +17,8 @@ public class ConditionControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    /* テキスト通り */
+    /* テストの際、後方の containsString() 中身 確認してください。  */
     @Test
     public void testYourEndpoint() throws Exception{
         mockMvc.perform(get("/condition"))
